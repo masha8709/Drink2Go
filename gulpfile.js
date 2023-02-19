@@ -69,8 +69,10 @@ export function createWebp () {
     .pipe(gulp.dest('build/img'))
 }
 
+//, '!source/img/icons/**/*.svg' - было не 75 строчке в квадратных скобках
+
 export function optimizeVector () {
-  return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
+  return gulp.src(['source/img/**/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
