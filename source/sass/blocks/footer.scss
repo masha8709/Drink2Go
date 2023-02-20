@@ -1,0 +1,84 @@
+.footer {
+  padding: 22px 20px 30px;
+}
+
+.footer__social-wrp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__social-list {
+  @include list-reset;
+  width: 160px;
+}
+
+.online-shop,
+.media {
+  margin-bottom: 16px;
+}
+
+.online-shop__list {
+  @include list-reset;
+}
+
+.online-shop__item,
+.media__item {
+  @include fonts(12px, 16px);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+
+.online-shop__link,
+.media__link {
+  color: $base_black;
+}
+
+.title-footer {
+  @include fonts(14px, 20px);
+  font-weight: 700;
+  color: $base_primary;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.media__list {
+  @include list-reset;
+}
+
+.contacts__list {
+  @include list-reset;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
+}
+
+.contacts__list {
+  @include fonts(14px, 20px);
+  margin-left: 19px;
+}
+
+.contacts__item {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.contacts__item-address::before,
+.contacts__item-phone::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 13px;
+  height: 16px;
+  top: 2px;
+  left: -21px;
+}
+
+.contacts__item-address::before {
+  background-image: url('../../img/icons/address.svg');
+}
+
+.contacts__item-phone::before {
+  background-image: url('../../img/icons/phone.svg');
+}

@@ -3,6 +3,14 @@
 @import "./global/variables.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/mixins.scss";
 
 /* BLOCKS */
 @import "blocks/header";
+@import "./blocks/map.scss";
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/button.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/footer.scss";

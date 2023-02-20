@@ -1,0 +1,82 @@
+.slider {
+  padding: 20px 20px 60px;
+  background-color: $flat_white;
+}
+
+.slider__list {
+  @include list-reset;
+}
+
+.slider__img {
+  margin: 0 auto 10px;
+}
+
+.new {
+  display: block;
+  @include fonts(12px, 16px);
+  color: $base_primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 4px;
+
+  &::before, &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+  }
+
+  &::before {
+    background-image: url('../../img/icons/arrow-prev.svg');
+    left: -14px;
+  }
+
+  &::after {
+    background-image: url('../../img/icons/arrow-next.svg');
+    right: -18px;
+  }
+}
+
+
+.slider__heading {
+  @include fonts(36px, 48px);
+  text-align: center;
+  color: $base_black;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.slider__text {
+  @include fonts(14px, 20px);
+  margin-top: 0;
+  margin-bottom: 20px;
+  width: 251px;
+  text-align: center;
+  color: $base_black;
+}
+
+.slider__old-price {
+  @include fonts(16px, 32px);
+  text-decoration: line-through;
+  color: $base_primary;
+  margin-left: 25px;
+  margin-right: 6px;
+}
+
+.slider__new-price {
+  @include fonts(20px, 32px);
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.slider__toggles {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

@@ -1,4 +1,51 @@
 .header {
-  color: #ffffff;
-  padding: 10px 15px;
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  color: $base_black;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 22px 40px;
+  }
+}
+
+.nav__account__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__account__item {
+  margin-right: 44px;
+}
+
+.nav__list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.nav__item {
+  @media (min-width: $tablet-width) {
+    margin-right: 40px;
+  }
+}
+
+.nav__link {
+  color: $base_black;
+}
+
+.nav__item--active {
+  color: $base_primary;
 }

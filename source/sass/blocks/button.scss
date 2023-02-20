@@ -1,0 +1,12 @@
+.button {
+  @include fonts(16px, 24px);
+  color: $base_white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  text-align: center;
+  width: 113px;
+  background-color: $base_primary;
+  cursor: pointer;
+  border-radius: 4px;
+}

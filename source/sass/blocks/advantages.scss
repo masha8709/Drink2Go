@@ -1,0 +1,67 @@
+.advantages {
+  padding: 50px 20px 60px;
+  text-align: center;
+}
+
+.advantages__small-title {
+  @include fonts(12px, 16px);
+  color: $base_primary;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.advantages__title {
+  @include fonts(24px, 36px);
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
+.advantages__list {
+  @include list-reset;
+}
+
+.advantages__heading {
+  @include fonts(18px, 32px);
+  font-weight: 700;
+  margin-top: 98px;
+  margin-bottom: 4px;
+}
+
+.advantages__text {
+  @include fonts(14px, 20px);
+  margin: 0 auto;
+  width: 250px;
+}
+
+.advantages__item {
+  position: relative;
+}
+
+.advantages__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 52px;
+  height: 56px;
+  top: -67px;
+  right: 122px;
+}
+
+.advantages__item:first-child::before {
+  background-image: url('../../img/icons/watch.svg');
+}
+
+.advantages__item:nth-child(2)::before {
+  background-image: url('../../img/icons/pocket.svg');
+}
+
+.advantages__item:nth-child(3)::before {
+  background-image: url('../../img/icons/lightning.svg');
+}
+
+.advantages__item:nth-child(4)::before {
+  background-image: url('../../img/icons/leaf.svg');
+}
