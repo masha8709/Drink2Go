@@ -16,33 +16,35 @@
       </a>
       <ul class="nav__account__list">
         <li class="nav__account__item">
-          <a class=" nav__account__link nav__account" href="#">
-            <span class="visually-hidden">Войти</span>
+          <a class=" nav__account__link nav__account" href="#" aria-label="Войти">
             <img src="./img/icons/user-icon.svg" width="16" height="16" alt="Кнопка для входа в личный кабинет">
+            <span class="nav__button-name">Войти</span>
           </a>
         </li>
         <li class="nav__account__item">
-          <a class="nav__account__link nav__busket" href="#">
-            <span class="visually-hidden">Корзина</span>
+          <a class="nav__account__link nav__busket" href="#" aria-label="Корзина">
             <img src="./img/icons/busket.svg" width="16" height="16" alt="Корзина товаров"></a>
+            <span class="nav__button-name">Корзина</span>
         </li>
       </ul>
-      <button class="nav__button-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link nav__item--active" href="#">главная</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">каталог</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">доставка</a>
-        <li class="nav__item">
-          <a class="nav__link" href="#">о нас</a>
-        </li>
-      </ul>
+      <div class="navigation nav--opened nav--nojs">
+        <button class="nav__button-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__item--active" href="#">главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">каталог</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">доставка</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">о нас</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main class="main">
@@ -50,7 +52,7 @@
       <h1 class="slider__main-heading visually-hidden">Онлайн магазин компании Drink2Go</h1>
       <ul class="slider__list">
         <li class="slider__item">
-          <img class="slider__img" src="./img/slider/decaf.png" width="280" height="280" alt="Банка кофе Декаф Флэт Уайт">
+          <img class="slider__img" src="./img/slider/slider-1-mobile.png" width="280" height="280" alt="Банка кофе Декаф Флэт Уайт">
           <span class="new">Новинка!</span>
           <h3 class="slider__heading">Декаф Флэт Уайт</h3>
           <p class="slider__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
@@ -60,7 +62,7 @@
           <button class="slider__button button" type="button" aria-label="Поместить товар в корзину">Заказать</button>
         </li>
         <li class="slider__item">
-          <img class="slider__img" src="./img/slider/lavender.png" width="280" height="280" alt="Банка кофе Лавандовый Латте">
+          <img class="slider__img" src="./img/slider/slider-2-mobile.png" width="280" height="280" alt="Банка кофе Лавандовый Латте">
           <span class="new">Новинка!</span>
           <h3 class="slider__heading">Лавандовый Латте</h3>
           <p class="slider__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым
@@ -70,7 +72,7 @@
           <button class="slider__button button" type="button" aria-label="Поместить товар в корзину">Заказать</button>
         </li>
         <li class="slider__item">
-          <img class="slider__img" src="./img/slider/espresso.png" alt="Банка кофе Тройной Эспрессо" width="280" height="280">
+          <img class="slider__img" src="./img/slider/slider-3-mobile.png" alt="Банка кофе Тройной Эспрессо" width="280" height="280">
           <span class="new">Новинка!</span>
           <h3 class="slider__heading">Тройной Эспрессо</h3>
           <p class="slider__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии
@@ -271,7 +273,7 @@
       <h2 class="map__title visually-hidden">Карта, где находится магазин Drink2Go</h2>
     </section>
   </main>
-  <footer class="footer">
+  <!--<footer class="footer">
     <div class="footer__social-wrp">
       <div class="footer__logo-wrp">
         <a class="footer__logo-text logo" href="#">
@@ -347,7 +349,7 @@
         </a>
       </p>
     </div>
-  </footer>
+  </footer>-->
 
   <script src="./js/script.js" defer></script>
 </body>
