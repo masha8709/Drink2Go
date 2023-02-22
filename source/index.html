@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -54,94 +56,99 @@
   <main class="main">
     <section class="slider">
       <h1 class="slider__main-heading visually-hidden">Онлайн магазин компании Drink2Go</h1>
-      <ul class="slider__list">
-        <li class="slider__item">
-          <div class="slider__image-wrp">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="./img/slider/slider-1-desktop.webp 1x, ./img/slider/slider-1-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="./img/slider/slider-1-tablet.webp 1x, ./img/slider/slider-1-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="./img/slider/slider-1-mobile.webp 1x, ./img/slider/slider-1-mobile@2x.webp 2x">
+      <div class="slider-wrp">
+        <ul class="slider__list slider__list--nojs">
+          <li class="slider__item">
+            <div class="slider__image-wrp">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/slider/slider-1-desktop.webp 1x, ./img/slider/slider-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/slider/slider-1-tablet.webp 1x, ./img/slider/slider-1-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/slider/slider-1-mobile.webp 1x, ./img/slider/slider-1-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)" srcset="./img/slider/slider-1-desktop.png 1x,
-              ./img/slider/slider-1-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="./img/slider/slider-1-tablet.png 1x,
-              ./img/slider/slider-1-tablet@2x.png 2x">
-              <img class="slider__img" src="./img/slider/slider-1-mobile.png"
-                srcset="./img/slider/slider-1-mobile@2x.png 2x" width="280" height="280"
-                alt="Банка кофе Декаф Флэт Уайт">
-            </picture>
-          </div>
-          <span class="new">Новинка!</span>
-          <h3 class="slider__heading">Декаф Флэт Уайт</h3>
-          <p class="slider__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
-            что нужно для расслабления после тяжёлого рабочего дня</p>
-          <span class="slider__old-price">295</span>
-          <span class="slider__new-price">225</span>
-          <button class="slider__button button" type="button" aria-label="Поместить товар в корзину">Заказать</button>
-        </li>
-        <li class="slider__item">
-          <div class="slider__image-wrp">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="./img/slider/slider-2-desktop.webp 1x, ./img/slider/slider-2-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="./img/slider/slider-2-tablet.webp 1x, ./img/slider/slider-2-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="./img/slider/slider-2-mobile.webp 1x, ./img/slider/slider-2-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="./img/slider/slider-1-desktop.png 1x,
+                ./img/slider/slider-1-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="./img/slider/slider-1-tablet.png 1x,
+                ./img/slider/slider-1-tablet@2x.png 2x">
+                <img class="slider__img" src="./img/slider/slider-1-mobile.png"
+                  srcset="./img/slider/slider-1-mobile@2x.png 2x" width="280" height="280"
+                  alt="Банка кофе Декаф Флэт Уайт">
+              </picture>
+            </div>
+            <span class="new">Новинка!</span>
+            <h3 class="slider__heading">Декаф Флэт Уайт</h3>
+            <p class="slider__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
+              что нужно для расслабления после тяжёлого рабочего дня</p>
+            <span class="slider__old-price">295</span>
+            <span class="slider__new-price">225</span>
+            <button class="slider__button button" type="button" aria-label="Поместить товар в корзину">Заказать</button>
+          </li>
+          <li class="slider__item">
+            <div class="slider__image-wrp">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/slider/slider-2-desktop.webp 1x, ./img/slider/slider-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/slider/slider-2-tablet.webp 1x, ./img/slider/slider-2-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/slider/slider-2-mobile.webp 1x, ./img/slider/slider-2-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)" srcset="./img/slider/slider-2-desktop.png 1x,
-              ./img/slider/slider-2-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="./img/slider/slider-2-tablet.png 1x,
-              ./img/slider/slider-2-tablet@2x.png 2x">
-              <img class="slider__img" src="./img/slider/slider-2-mobile.png"
-                srcset="./img/slider/slider-2-mobile@2x.png 2x" width="280" height="280"
-                alt="Банка кофе Лавандовый Латте">
-            </picture>
-          </div>
-          <span class="new">Новинка!</span>
-          <h3 class="slider__heading">Лавандовый Латте</h3>
-          <p class="slider__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым
-            сиропом унесёт вас прямо на вершину Радужных гор</p>
-          <span class="slider__old-price">285</span>
-          <span class="slider__new-price">265</span>
-          <button class="slider__button button" type="button" aria-label="Поместить товар в корзину">Заказать</button>
-        </li>
-        <li class="slider__item">
-          <div class="slider__image-wrp">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="./img/slider/slider-3-desktop.webp 1x, ./img/slider/slider-3-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="./img/slider/slider-3-tablet.webp 1x, ./img/slider/slider-3-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="./img/slider/slider-3-mobile.webp 1x, ./img/slider/slider-3-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="./img/slider/slider-2-desktop.png 1x,
+                ./img/slider/slider-2-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="./img/slider/slider-2-tablet.png 1x,
+                ./img/slider/slider-2-tablet@2x.png 2x">
+                <img class="slider__img" src="./img/slider/slider-2-mobile.png"
+                  srcset="./img/slider/slider-2-mobile@2x.png 2x" width="280" height="280"
+                  alt="Банка кофе Лавандовый Латте">
+              </picture>
+            </div>
+            <span class="new">Новинка!</span>
+            <h3 class="slider__heading">Лавандовый Латте</h3>
+            <p class="slider__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым
+              сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <span class="slider__old-price">285</span>
+            <span class="slider__new-price">265</span>
+            <button class="slider__button button" type="button" aria-label="Поместить товар в корзину">Заказать</button>
+          </li>
+          <li class="slider__item">
+            <div class="slider__image-wrp">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/slider/slider-3-desktop.webp 1x, ./img/slider/slider-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/slider/slider-3-tablet.webp 1x, ./img/slider/slider-3-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/slider/slider-3-mobile.webp 1x, ./img/slider/slider-3-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)" srcset="./img/slider/slider-3-desktop.png 1x,
-              ./img/slider/slider-3-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="./img/slider/slider-3-tablet.png 1x,
-              ./img/slider/slider-3-tablet@2x.png 2x">
-              <img class="slider__img" src="./img/slider/slider-3-mobile.png"
-                srcset="./img/slider/slider-3-mobile@2x.png 2x" width="280" height="280"
-                alt="Банка кофе Тройной Эспрессо">
-            </picture>
-          </div>
-          <span class="new">Новинка!</span>
-          <h3 class="slider__heading">Тройной Эспрессо</h3>
-          <p class="slider__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии
-            покажет вам, что такое настоящая бодрость</p>
-          <span class="slider__old-price">395</span>
-          <span class="slider__new-price">375</span>
-          <button class="slider__button button" type="button" aria-label="Поместить товар в корзину">Заказать</button>
-        </li>
-      </ul>
-      <p class="slider__toggles">
+                <source media="(min-width: 1440px)" srcset="./img/slider/slider-3-desktop.png 1x,
+                ./img/slider/slider-3-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="./img/slider/slider-3-tablet.png 1x,
+                ./img/slider/slider-3-tablet@2x.png 2x">
+                <img class="slider__img" src="./img/slider/slider-3-mobile.png"
+                  srcset="./img/slider/slider-3-mobile@2x.png 2x" width="280" height="280"
+                  alt="Банка кофе Тройной Эспрессо">
+              </picture>
+            </div>
+            <span class="new">Новинка!</span>
+            <h3 class="slider__heading">Тройной Эспрессо</h3>
+            <p class="slider__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии
+              покажет вам, что такое настоящая бодрость</p>
+            <span class="slider__old-price">395</span>
+            <span class="slider__new-price">375</span>
+            <button class="slider__button button" type="button" aria-label="Поместить товар в корзину">Заказать</button>
+          </li>
+        </ul>
+      </div>
+      <button class="slider__button-prev" type="button"></button>
+      <button class="slider__button-next" type="button"></button>
+      <div class="swiper-pagination"></div>
+      <!-- <p class="slider__toggles">
         <button class="slider__toggle slider__toggle--current" type="button">1</button>
         <button class="slider__toggle" type="button">2</button>
         <button class="slider__toggle" type="button">3</button>
-      </p>
+      </p> -->
     </section>
     <section class="advantages">
       <span class="advantages__small-title">Преимущества</span>
@@ -408,7 +415,7 @@
         </div>
       </div>
     </section>
-    <section class="map">
+    <section class="map" id="map">
       <h2 class="map__title visually-hidden">Карта, где находится магазин Drink2Go</h2>
     </section>
   </main>
@@ -489,6 +496,9 @@
       </p>
     </div>
   </footer>-->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
   <script src="./js/script.js" defer></script>
 </body>
