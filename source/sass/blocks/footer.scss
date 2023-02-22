@@ -9,7 +9,16 @@
 
 .footer__social-list {
   @include list-reset;
-  width: 160px;
+  width: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__social-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .online-shop,
@@ -46,12 +55,12 @@
   @include list-reset;
 }
 
-.contacts__list {
-  @include list-reset;
+.contacts {
+  margin-bottom: 20px;
 }
 
-.contacts__title {
-  margin-bottom: 20px;
+.contacts__list {
+  @include list-reset;
 }
 
 .contacts__list {
@@ -62,6 +71,10 @@
 .contacts__item {
   margin-bottom: 16px;
   position: relative;
+}
+
+.contacts__item-phone {
+  margin-bottom: 40px;
 }
 
 .contacts__item-address::before,
@@ -81,4 +94,27 @@
 
 .contacts__item-phone::before {
   background-image: url('../../img/icons/phone.svg');
+}
+
+.footer__copyright {
+  margin-left: 30px;
+}
+
+.copyright__text {
+  @include fonts(12px, 16px);
+  color: $base_grey;
+  margin-top: 0;
+  display: flex;
+}
+
+.copyright__link {
+  color: $base_grey;
+  text-transform: uppercase;
+  display: flex;
+  margin-left: 5px;
+}
+
+.copyright__logo {
+  width: 12px;
+  height: 16px;
 }
