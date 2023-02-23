@@ -1,43 +1,98 @@
 .advantages {
-  padding: 50px 20px 60px;
+  padding: 36px 20px 72px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 251px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 100px;
+    padding-bottom: 124px;
+  }
 }
 
 .advantages__small-title {
-  @include fonts(12px, 16px);
+  @include fonts(14px, 16px);
   color: $base_primary;
   font-weight: 700;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .advantages__title {
-  @include fonts(24px, 36px);
+  @include fonts(26px, 36px);
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(45px, 62px);
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 101px;
+  }
 }
 
 .advantages__list {
   @include list-reset;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 37px;
+  }
 }
 
 .advantages__heading {
-  @include fonts(18px, 32px);
+  @include fonts(19px, 32px);
   font-weight: 700;
-  margin-top: 98px;
+  margin-top: 99px;
   margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(27px, 40px);
+    margin-top: 54px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }
 
 .advantages__text {
-  @include fonts(14px, 20px);
+  @include fonts(16px, 20px);
   margin: 0 auto;
-  width: 250px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(16px, 24px);
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }
 
 .advantages__item {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 82px;
+    width: 330px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0px;
+    width: 311px;
+  }
 }
 
 .advantages__item::before {
@@ -46,8 +101,18 @@
   position: absolute;
   width: 52px;
   height: 56px;
-  top: -67px;
-  right: 122px;
+  top: -65px;
+  right: 114px;
+
+  @media (min-width: $tablet-width) {
+    top: 59px;
+    right: 268px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -19px;
+    right: 127px;
+  }
 }
 
 .advantages__item:first-child::before {

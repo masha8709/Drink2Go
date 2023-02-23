@@ -14,6 +14,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    height: 480px;
     background-image: url("../../img/map/map-tablet.jpg");
     background-size: 768px auto;
 
@@ -24,6 +25,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    height: 540px;
     background-image: url("../../img/map/map-desktop.jpg");
     background-size: 1440px auto;
 

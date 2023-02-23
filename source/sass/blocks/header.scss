@@ -1,5 +1,5 @@
 .header {
-  padding: 12px 20px;
+  padding: 12px 20px 12px;
   color: $base_black;
   font-weight: 500;
   font-size: 12px;
@@ -7,18 +7,53 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    padding: 22px 20px;
+    padding: 19px 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 22px 40px;
+    padding: 22px 40px 18px;
   }
 }
+@media (min-width: $desktop-width) {
+  .header__logo {
+    display: flex;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .header__logo-img {
+    width: 82px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__logo-img {
+    width: 170px;
+  }
+}
+
+.header__logo-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    width: 126px;
+    display: block;
+    text-transform: none;
+    margin-left: 12px;
+    color: $base_black;
+  }
+}
+
 
 .nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+  }
 }
 
 .nav__account__list {
@@ -26,14 +61,31 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: 108px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 23px;
+    margin-right: -21px;
+    order: 1;
+  }
 }
 
 .nav__account__item {
   margin-right: 44px;
 }
 
+@media (min-width: $desktop-width) {
+  .nav__account__link{
+    display: flex;
+  }
+}
+
 .nav__button-name {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-left: 5px;
+  }
 }
 
 .navigation {
@@ -136,20 +188,22 @@
   @media (max-width: $mobile-width-only) {
     padding-top: 20px;
   }
-}
-  // @media (min-width: $tablet-width) {
-  //   .nav__list {
-  //     padding: 22px 20px;
-  //     display: flex;
-  //     flex-wrap: wrap;
-  //   }
-  // }
 
-// .nav__item {
-//   @media (min-width: $tablet-width) {
-//     margin-right: 40px;
-//   }
-// }
+  @media (min-width: $tablet-width) {
+    @include fonts(13px, 16px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 368px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include fonts(20px, 30px);
+    margin-top: 10px;
+    width: 470px;
+  }
+}
 
 .nav__item {
   margin-bottom: 40px;
@@ -157,6 +211,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    margin-left: 10px;
   }
 }
 

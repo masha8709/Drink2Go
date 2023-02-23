@@ -1,19 +1,68 @@
 .slider {
-  padding: 20px 20px 60px;
+  padding: 20px 20px 40px;
   background-color: $flat_white;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 60px;
+    min-height: 714px;
+  }
 }
 
 .slider__list {
   @include list-reset;
 }
 
+.slider__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: end;
+  }
+}
+
+.slider__image-wrp {
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 294px;
+    left: 126px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -29px;
+    left: 65px;
+  }
+}
+
 .slider__img {
-  margin: 0 auto 10px;
+  margin: 0 auto 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
 }
 
 .new {
   display: block;
-  @include fonts(12px, 16px);
+  @include fonts(14px, 16px);
   color: $base_primary;
   text-align: center;
   text-transform: uppercase;
@@ -21,18 +70,23 @@
   position: relative;
   margin-bottom: 4px;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     display: block;
     position: absolute;
     width: 20px;
     height: 20px;
     top: 7px;
+
+    @media (min-width: $tablet-width) {
+      top: 210px;
+    }
   }
 
   &::before {
     background-image: url('../../img/icons/arrow-prev.svg');
-    left: -14px;
+    left: -19px;
   }
 
   &::after {
@@ -41,30 +95,54 @@
   }
 }
 
-
 .slider__heading {
-  @include fonts(36px, 48px);
+  @include fonts(40px, 48px);
   text-align: center;
   color: $base_black;
   margin-top: 0;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(63px, 89px);
+  }
 }
 
 .slider__text {
-  @include fonts(14px, 20px);
+  @include fonts(15px, 20px);
   margin-top: 0;
   margin-bottom: 20px;
-  width: 251px;
+  width: 270px;
   text-align: center;
   color: $base_black;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(22px, 32px);
+    width: 640px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.slider__price-wrp {
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
 }
 
 .slider__old-price {
-  @include fonts(16px, 32px);
+  @include fonts(17px, 32px);
   text-decoration: line-through;
   color: $base_primary;
   margin-left: 25px;
   margin-right: 6px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }
 
 .slider__new-price {
@@ -79,4 +157,8 @@
   @media (min-width: $desktop-width) {
     display: block;
   }
+}
+
+.button-slide {
+  border: none;
 }
