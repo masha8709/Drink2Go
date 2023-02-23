@@ -178,39 +178,37 @@
       <form action="" class="form">
         <fieldset class="form__group">
           <legend class="form__title">Цена</legend>
-          <div class="price-wrp">
-            <input class="minprice" type="text" placeholder="0" id="minprice" name="Минимальная цена">
-            <label for="minprice"></label>
-            <input class="maxprice" type="text" placeholder="900" id="maxprice" name="Максимальная цена">
-            <label for="maxprice"></label>
-          </div>
           <div class="range-filter">
             <div class="range-controls">
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <button class="toggle toggle-min" aria-label="Увеличить цену"></button>
-              <button class="toggle toggle-max" aria-label="Уменьшить цену"></button>
+              <div class="toggle toggle-min" tabindex="0"></div>
+              <div class="toggle toggle-max" tabindex="0"></div>
             </div>
+
+          <div class="price-controls">
+            <input class="minprice price-controls__input" type="number" value="0" id="minprice" name="Минимальная цена">
+            <input class="maxprice price-controls__input" type="number" value="900" id="maxprice" name="Максимальная цена">
           </div>
         </fieldset>
         <fieldset class="form__group">
           <legend class="form__title">Наличие молока</legend>
           <ul class="milk-list">
             <li class="milk-list__item">
-              <input class="visually-hidden" type="radio" name="presence-of-milk" id="anyway" value="anyway" checked>
+              <input class="milk-list__radio visually-hidden" type="radio" name="presence-of-milk" id="anyway" value="anyway" checked>
               <label for="anyway">Неважно</label>
             </li>
             <li class="milk-list__item">
-              <input class="visually-hidden" type="radio" name="presence-of-milk" id="animal" value="amimal">
+              <input class="milk-list__radio visually-hidden" type="radio" name="presence-of-milk" id="animal" value="amimal">
               <label for="animal">Только животное</label>
             </li>
             <li class="milk-list__item">
-              <input class="visually-hidden" type="radio" name="presence-of-milk" id="plant" value="plant">
+              <input class="milk-list__radio visually-hidden" type="radio" name="presence-of-milk" id="plant" value="plant">
               <label for="plant">Только растительное</label>
             </li>
             <li class="milk-list__item">
-              <input class="visually-hidden" type="radio" name="presence-of-milk" id="no-milk" value="no-milk" disabled>
+              <input class="milk-list__radio visually-hidden" type="radio" name="presence-of-milk" id="no-milk" value="no-milk">
               <label for="no-milk">Без молока</label>
             </li>
           </ul>
@@ -219,29 +217,29 @@
           <legend class="form__title">Страна произрастания</legend>
           <ul class="country-list">
             <li class="country-list__item">
-              <input class="visually-hidden" type="checkbox" id="brazil" name="brazil" checked>
+              <input class="country-list__input visually-hidden" type="checkbox" id="brazil" name="brazil" checked>
               <label for="brazil">Бразилия</label>
             </li>
-            <li class="country-list__item-item">
-              <input class="visually-hidden" type="checkbox" id="ethiopia" name="ethiopia">
-              <label for="ethiopia">"Эфиопия"</label>
+            <li class="country-list__item">
+              <input class="country-list__input visually-hidden" type="checkbox" id="ethiopia" name="ethiopia">
+              <label for="ethiopia">Эфиопия</label>
             </li>
-            <li class="country-list__item-item">
-              <input class="visually-hidden" type="checkbox" id="сolombia" name="сolombia">
+            <li class="country-list__item">
+              <input class="country-list__input visually-hidden" type="checkbox" id="сolombia" name="сolombia">
               <label for="сolombia">Колумбия</label>
             </li>
-            <li class="country-list__item-item">
-              <input class="visually-hidden" type="checkbox" id="costarica" name="costarica">
+            <li class="country-list__item">
+              <input class="country-list__input visually-hidden" type="checkbox" id="costarica" name="costarica">
               <label for="costarica">Коста-Рика</label>
             </li>
-            <li class="country-list__item-item">
-              <input class="visually-hidden" type="checkbox" id="peru" name="peru">
+            <li class="country-list__item">
+              <input class="country-list__input visually-hidden" type="checkbox" id="peru" name="peru">
               <label for="peru">Перу</label>
             </li>
           </ul>
           <div class="buttons-wrp">
-            <input class="button" type="submit" value="Применить фильтр">
-            <input class="button" type="reset" value="Сбросить фильтр">
+            <input class="butoon__filter butoon__filter-submit button" type="submit" value="Применить фильтр">
+            <input class="butoon__filter butoon__filter-reset button" type="reset" value="Сбросить фильтр">
           </div>
         </fieldset>
       </form>
@@ -398,15 +396,13 @@
               <a href="#" aria-label="Предыдущая страница"></a>
             </li>
             <li class="pagination__item">
-              <a href="#">1</a></li>
+              <a class="pagination__link" href="#">1</a></li>
             <li class="pagination__item pagination__item--current">
               <a>2</a>
             </li>
             <li class="pagination__item">
               <a href="#">3</a>
             </li>
-            <li class="pagination__item">
-              <a href="#">4</a>
             </li>
             <li class="pagination__item pagination__item--next">
               <a href="#" aria-label="Следующая страница"></a>

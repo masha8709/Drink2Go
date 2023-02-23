@@ -23,6 +23,190 @@
 
 .form__group {
   border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__title {
+  @include fonts(16px, 24px);
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.range-filter {
+  width: 280px;
+}
+
+.range-controls {
+  height: 26px;
+  margin-bottom: 25px;
+  padding-top: 13px;
+  position: relative;
+}
+
+.range-controls .scale {
+  height: 2px;
+  width: 280px;
+  background: $light_grey;
+}
+
+
+.range-controls .bar {
+  width: 240px;
+  height: 2px;
+  background: $primary_lighter;
+  box-shadow: 0 1px 0 0 $primary_lighter, 0 -1px 0 0 $primary_lighter;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 2px solid $primary_lighter;
+  background-color: $base_white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-max {
+  left: 240px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    background-color: $base_grey;
+    top: 20px;
+    right: 132px;
+  }
+}
+
+.price-controls__input {
+  @include fonts(16px, 24px);
+  font-weight: 500;
+  width: 118px;
+  padding: 7px 10px;
+  text-align: center;
+  border: 2px solid $primary_lighter;
+  border-radius: 4px;
+}
+
+.minprice {
+  color: $base_grey;
+}
+
+.milk-list {
+  @include list-reset;
+  padding-left: 34px;
+}
+
+.milk-list__item {
+  @include fonts(16px, 24px);
+  margin-bottom: 25px;
+}
+
+.milk-list__item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.milk-list__radio+label::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $base_grey;
+}
+
+.milk-list__radio:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -30px;
+  width: 16px;
+  height: 16px;
+  background-color: $base_primary;
+  border-radius: 50%;
+}
+
+.country-list {
+  @include list-reset;
+  padding-left: 52px;
+}
+
+.country-list__item {
+  @include fonts(16px, 24px);
+  margin-bottom: 25px;
+}
+
+.country-list__item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.country-list__input+label::before {
+  content: "";
+  position: absolute;
+  left: -52px;
+  top: 0;
+  width: 42px;
+  height: 25px;
+  border-radius: 12px;
+  background-color: $base_grey;
+}
+
+.country-list__input+label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -50px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $base_white;
+}
+
+.country-list__input:checked+label::before {
+  background-color: $base_primary;
+}
+
+.country-list__input:checked+label::after {
+  left: -32px;
+}
+
+.buttons-wrp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.butoon__filter {
+  @include fonts(13px, 24px);
+  width: 160px;
+}
+
+.butoon__filter-submit {
+  margin-bottom: 25px;
 }
 
 .products__list {
@@ -78,4 +262,65 @@
   height: 16px;
   top: 10px;
   left: 21px;
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pagination__item {
+  margin-right: 20px;
+}
+
+.pagination__item:last-child {
+  margin-right: 0;
+}
+
+.pagination__item {
+  @include fonts(16px, 24px);
+  display: block;
+  padding: 8px 13px;
+  color: $base_primary;
+  background-color: $base_white;
+  border-radius: 4px;
+}
+
+.pagination__item--current,
+.pagination__item--current:hover,
+.pagination__item--current:focus,
+.pagination__item--current:active {
+  font-weight: 600;
+  color: $base_black;
+  background-color: transparent;
+}
+
+.pagination__item--prev,
+.pagination__item--next {
+  padding: 8px 16px;
+  position: relative;
+}
+
+.pagination__item--prev::before,
+.pagination__item--next::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  top: 15px;
+  right: 14px;
+}
+
+.pagination__item--prev::before {
+  background-image: url('../../img/icons/arrow-prev-small.svg');
+  background-repeat: no-repeat;
+}
+
+.pagination__item--next::before {
+  background-image: url('../../img/icons/arrow-next-small.svg');
 }
