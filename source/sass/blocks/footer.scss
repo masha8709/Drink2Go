@@ -97,7 +97,8 @@
 .online-shop {
   position: relative;
 
-  ::before, ::after {
+  ::before,
+  ::after {
     content: "";
     display: block;
     position: absolute;
@@ -149,7 +150,8 @@
   @include list-reset;
   position: relative;
 
-  ::before, ::after {
+  ::before,
+  ::after {
     content: "";
     display: block;
     position: absolute;
@@ -228,10 +230,9 @@
     margin-left: 247px;
   }
 
-  @media (min-width: $desktop-width)
-   {
+  @media (min-width: $desktop-width) {
     margin-left: 547px;
-   }
+  }
 }
 
 .copyright__text {
