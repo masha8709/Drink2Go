@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 40px;
+    padding-right: 115px;
     padding-left: 40px;
     padding-bottom: 60px;
     min-height: 714px;
@@ -67,32 +67,7 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  position: relative;
   margin-bottom: 4px;
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 7px;
-
-    @media (min-width: $tablet-width) {
-      top: 210px;
-    }
-  }
-
-  &::before {
-    background-image: url('../../img/icons/arrow-prev.svg');
-    left: -19px;
-  }
-
-  &::after {
-    background-image: url('../../img/icons/arrow-next.svg');
-    right: -18px;
-  }
 }
 
 .slider__heading {
@@ -161,4 +136,83 @@
 
 .button-slide {
   border: none;
+}
+
+.slider__button-next,
+.slider__button-prev {
+  position: absolute;
+  min-height: 636px;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  top: 63px;
+  z-index: 10;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    top: 79px;
+    min-height: 639px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 715px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    @include arrow(12px, 12px);
+    top: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 38%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, $base_white 0, rgba($base_white, $alpha: 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba($base_primary, $alpha: 0.25), rgba($base_primary, $alpha: 0) 100%);
+  }
+
+  &:disabled {
+    &::before {
+      border-color: $base_grey;
+    }
+  }
+}
+
+.slider__button-next {
+  right: 0;
+
+  &::before {
+    transform: rotate(45deg);
+    right: 7px;
+
+    @media (min-width: $tablet-width) {
+      right: 37px;
+    }
+  }
+}
+
+.slider__button-prev {
+  left: 0;
+
+  &::before {
+    transform: rotate(-135deg);
+    left: 7px;
+
+    @media (min-width: $tablet-width) {
+      left: 37px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
 }

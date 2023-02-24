@@ -94,6 +94,31 @@
   }
 }
 
+.online-shop {
+  position: relative;
+
+  ::before, ::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 320px;
+    border-bottom: 1px solid $base_secondary;
+    left: -20px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  ::before {
+    top: -20px;
+  }
+
+  ::after {
+    bottom: -20px
+  }
+}
+
 .online-shop__list {
   @include list-reset;
   margin-bottom: 50px;
@@ -122,6 +147,28 @@
 
 .media__list {
   @include list-reset;
+  position: relative;
+
+  ::before, ::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 320px;
+    border-bottom: 1px solid $base_secondary;
+    left: -20px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  ::before {
+    bottom: -181px;
+  }
+
+  ::after {
+    bottom: -20px
+  }
 }
 
 .contacts {
