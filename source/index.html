@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page__body">
@@ -24,7 +23,7 @@
       </a>
       <ul class="nav__account__list">
         <li class="nav__account__item">
-          <a class=" nav__account__link nav__account" href="#" aria-label="Войти">
+          <a class="nav__account__link nav__account" href="#" aria-label="Войти">
             <img src="./img/icons/user-icon.svg" width="16" height="16" alt="Кнопка для входа в личный кабинет">
             <span class="nav__button-name">Войти</span>
           </a>
@@ -253,7 +252,21 @@
       <div class="catalog__products">
         <div class="sort">
           <span class="sort__txt">Сортировка: </span>
-          <button class="sort__button" type="button">По умолчанию</button>
+          <button class="sort__button" type="button">по умолчанию</button>
+          <ul class="sort__list">
+            <li class="sort__item">
+              <a class="sort__link sort__link--active" href="#">по умолчанию</a>
+            </li>
+            <li class="sort__item">
+              <a class="sort__link" href="#">сначала дорогие</a>
+            </li>
+            <li class="sort__item">
+              <a class="sort__link" href="#">сначала дешёвые</a>
+            </li>
+            <li class="sort__item">
+              <a class="sort__link" href="#">высокий рейтинг</a>
+            </li>
+          </ul>
         </div>
         <div class="products">
           <ul class="products__list">
@@ -475,7 +488,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
   <script src="./js/script.js" defer></script>

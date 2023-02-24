@@ -9,4 +9,17 @@
   background-color: $base_primary;
   cursor: pointer;
   border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary_lighter;
+  }
+
+  &:active {
+    background-color: $primary_darker;
+  }
+
+  &:disabled {
+    background-color: $base_grey;
+  }
 }

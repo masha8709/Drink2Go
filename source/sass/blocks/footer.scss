@@ -199,6 +199,15 @@
   text-transform: uppercase;
   display: flex;
   margin-left: 5px;
+
+  &:hover,
+  &:focus {
+    color: $base_primary;
+  }
+
+  &:active {
+    color: $primary_darker;
+  }
 }
 
 .copyright__logo {

@@ -8,3 +8,11 @@
   font-size: $size;
   line-height: $height;
 }
+
+
+@mixin arrow($w : 5px, $h : 5px, $color: $base_primary) {
+  min-width: $w;
+  min-height: $h;
+  border-top: 2px solid $base_primary;
+  border-right: 2px solid $color;
+}

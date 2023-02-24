@@ -243,12 +243,6 @@
   }
 }
 
-// .nav__item:not(:last-child) {
-//   @media (min-width: $tablet-width) {
-//     margin-right: 35px;
-//   }
-// }
-
 .nav__item:last-child {
   margin-bottom: 24px;
 
@@ -259,6 +253,15 @@
 
 .nav__link {
   color: $base_black;
+
+  &:hover,
+  &:focus {
+    color: $primary_lighter;
+  }
+
+  &:active {
+    color: $primary_darker;
+  }
 }
 
 .nav__item--active {
